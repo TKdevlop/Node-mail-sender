@@ -39,5 +39,7 @@ app.get("/",(req,res)=>{
             ;
         }).catch(err => res.status(404).send(err))
     })
-
-    app.listen(PORT)
+    app.listen(PORT, () => {
+        console.log(`Started up at port ${PORT}`);
+      })
+      

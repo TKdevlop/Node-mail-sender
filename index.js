@@ -5,17 +5,13 @@ const bodyPaser = require("body-parser");
 const cors = require('cors'); 
 const app = express();
 const PORT = process.env.PORT || 3000;
-
-
-
-
 app.use(cors());
     const mailTransport = nodemailer.createTransport(
-        `smtps://sendmail9411@gmail.com:mynameisjeff@smtp.gmail.com`);
+        `smtps://mailsender9412@gmail.com:mynameisjeff@smtp.gmail.com`);
 
     function sendEmail(email, body) {
         const mailOptions = {
-            from: `preetykharbanda1970@gmail.com`,
+            from: ``,
             to: email
         };
         // hmtl message constructions

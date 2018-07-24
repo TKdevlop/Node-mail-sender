@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 app.use(cors());
     const mailTransport = nodemailer.createTransport(
-        `smtps://mailsender9412@gmail.com:mynameisjeff@smtp.gmail.com`);
+        `smtps://your email:your pass@smtp.gmail.com`);
 
     function sendEmail(email, body) {
         const mailOptions = {
@@ -33,7 +33,7 @@ app.get("/",(req,res)=>{
             email: req.body.email,
             message: req.body.message
         }
-        sendEmail('tusharkharbanda13@gmail.com', meassge).then(() => {
+        sendEmail('sender', meassge).then(() => {
             return res.status(200).send("Success")
           
             ;

@@ -23,7 +23,9 @@ const PORT = process.env.PORT || 3000;
         return mailTransport.sendMail(mailOptions);
     }
     app.use(bodyPaser());
-
+app.get("/",(req,res)=>{
+    res.send("Only post request")
+})
     app.post("/", (req, res) => {
 
         const meassge = {
